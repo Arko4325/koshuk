@@ -1,0 +1,393 @@
+/* Стилі спеціально для сторінки кошика */
+.cart-body {
+    background-color: #f8f9fa;
+}
+
+.cart-wrapper {
+    padding: 40px 0;
+}
+
+.cart-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.cart-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+/* Картка товару в кошику */
+.cart-item-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.item-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.item-info p {
+    color: #e60012;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Кнопки кількості */
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f1f1f1;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.qty-btn {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Бокова панель підсумку */
+.cart-summary {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.summary-row.total {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pay-btn {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.pay-btn:hover { background: #333; }
+
+.clear-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #666;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #020302;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.product {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+}
+
+
+#cart-count {
+  transition: all 0.3s;
+}
+
+
+
+
+
+/* Базові налаштування */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f7; /* Світло-сірий фон */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. ХЕДЕР */
+header {
+    background-color: #252525;
+    color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.cart-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* --- СЕКЦІЇ (Загальні стилі) --- */
+.hero, .about, .products, footer, .page-hero {
+    background-color: #ffffff;
+    margin-top: 20px;
+    padding: 40px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+/* 2. ГОЛОВНИЙ БАНЕР (з index.html) */
+.hero-content, .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-image, .hero-text, 
+.about-image, .about-text {
+    flex: 1;
+}
+
+.hero-image img, .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-top: 15px;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+.new-price {
+    color: #e60012;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* 3. ПРО МАГАЗИН */
+.about-text h3 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+/* 4. СІТКА ПРОДУКТІВ (Категорії з index.html) */
+.products h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    display: flex; /* <-- ВАЖЛИВО: для вирівнювання кнопки */
+    flex-direction: column; /* <-- ВАЖЛИВО: контент йде згори вниз */
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.product-card h4 {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+}
+
+/* 5. ФУТЕР */
+footer {
+    background-color: #252525;
+    color: #eee;
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer h3 { margin-top: 0; font-size: 1.5em; }
+.phone-number { font-size: 2em; font-weight: bold; color: white; margin: 10px 0; }
+.phone-number.small { font-size: 1.5em; margin-top: 20px; }
+.phone-details { color: #aaa; margin: 0; }
+
+
+/* ===============================================
+   НОВІ СТИЛІ для сторінки `smartphones.html` 
+===============================================
+*/
+
+/* Герой-заголовок сторінки */
+.page-hero {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+.page-hero h1 {
+    font-size: 2.8em;
+    margin: 0;
+}
+.page-hero p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0 0 0;
+}
+
+/* Нова сітка для смартфонів (3 колонки) */
+.smartphone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px;
+}
+
+/* Стилі для контенту всередині картки */
+.product-card-image {
+    text-align: center;
+    padding: 20px 20px 10px;
+}
+.product-card-image img {
+    max-width: 100%;
+    height: 250px; /* Фіксована висота для вирівнювання */
+    object-fit: contain; /* Картинка вписується, не розтягується */
+}
+
+/* Блок з текстом, ціною і кнопкою */
+.product-card-content {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* <-- ВАЖЛИВО: "розтягує" цей блок на всю висоту */
+}
+
+.product-card-content h4 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+/* Список характеристик */
+.product-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #444;
+    font-size: 0.95em;
+}
+.product-specs li {
+    margin-bottom: 5px;
+}
+
+/* Ціна */
+.product-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #e60012; /* Фірмовий червоний */
+    margin-top: auto; /* <-- МАГІЯ: притискає ціну до низу */
+    margin-bottom: 15px;
+}
+
+/* Кнопка "Придбати" */
+.buy-btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff; /* Фірмовий синій */
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 1. ХЕДЕР */
+header {
+    background-color: #252525;
+    color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.1em;
+}
